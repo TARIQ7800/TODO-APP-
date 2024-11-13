@@ -1,0 +1,131 @@
+
+
+body {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center; /* centers vertically */
+  min-height: 100vh; /* makes sure body takes up full viewport height */
+  margin: 0; /* removes any default margin */
+}
+
+
+
+
+/* Container Styling */
+.container {
+  width: 800px;
+  padding: 20px;
+  background-color: aqua;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s;
+}
+
+.container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Input and Button Styling */
+#input, #btn {
+  border-radius: 5px;
+  height: 40px;
+  font-size: large;
+  font-family: "Courier New", Courier, monospace;
+  margin: 5px;
+  transition: box-shadow 0.3s ease;
+}
+
+#input {
+  width: 250px;
+  background-color: blue;
+  color: black;
+}
+
+#input:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+}
+
+#btn {
+  width: 150px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+#btn:hover {
+  background-color: rgb(19, 19, 26);
+  color: white;
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(255, 71, 87, 0.4);
+}
+
+/* To-Do Item Styling */
+.brd {
+  border-bottom: 2px solid black;
+  box-shadow: 0px 10px 10px rgba(48, 45, 48);
+  padding: 10px;
+  margin-top: 10px;
+  animation: fadeIn 0.5s ease-in;
+  transition: transform 0.3s ease;
+}
+
+.brd:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.02);
+  box-shadow: 0px 10px 15px rgba(48, 45, 48, 0.2);
+  cursor: pointer;
+}
+
+/* Button Styling for Update and Delete */
+.update, .decro {
+  height: 40px;
+  width: 150px;
+  border-radius: 15px;
+  margin: 5px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.update {
+  background-color: #4caf50; /* Green */
+}
+
+.update:hover {
+  background-color: #66bb6a;
+  box-shadow: 0px 10px 10px rgba(48, 45, 48, 0.2);
+}
+
+.decro {
+  background-color: blue;
+}
+
+.decro:hover {
+  background-color: rgba(130, 39, 155);
+  color: white;
+  box-shadow: 0px 10px 10px rgba(48, 45, 48);
+  transform: scale(1.02);
+}
+
+/* Animation for Item Appearance */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+      width: 90%;
+      padding: 10px;
+  }
+
+  #input, #btn {
+      width: 100%;
+      margin: 5px 0;
+  }
+}
